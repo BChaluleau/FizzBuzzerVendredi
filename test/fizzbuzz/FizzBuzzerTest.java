@@ -15,9 +15,21 @@ class FizzBuzzerTest {
 	}
 
 	@Test
-	void testPremierCoup() {
+	void testPremierCoups() {
 		assertEquals("1", fb.play());
 		assertEquals("2", fb.play());
+	}
+
+	@Test
+	void testPremierFizz() {
+		preshot(2);
+		assertEquals("Fizz", fb.play());
+	}
+
+	private void preshot(int turn) {
+		for (int i = 0; i < turn; i++) {
+			fb.play();
+		}
 	}
 
 }
