@@ -14,7 +14,7 @@ public class FizzBuzzer {
 
 	private String reponsePourTour(int turn) {
 		for (int i = 0; i < MAGIC_KEYS.length; i++) {
-			if (MAGIC_KEYS[i] == turn) {
+			if (turn % MAGIC_KEYS[i] == 0) {
 				return MAGIC_VALUES[i]; // dictionnaire à pas cher
 			}
 		}
